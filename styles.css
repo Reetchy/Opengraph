@@ -1,0 +1,154 @@
+
+@font-face {
+    font-family: "Circular Book";
+    src: url("fonts/CircularStd-Book.otf")
+}  
+
+@font-face {
+    font-family: "Circular Medium";
+    src: url("fonts/CircularStd-Medium.otf")
+} 
+
+@font-face {
+    font-family: "Circular Bold";
+    src: url("fonts/CircularStd-Bold.otf")
+} 
+
+@font-face {
+    font-family: "Circular Black";
+    src: url("fonts/CircularStd-Black.otf")
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1200px;
+    height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #121212;
+}
+
+.content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-image{
+    opacity: 0.3;
+    position: absolute;
+    overflow: hidden;
+    width: 1200px;
+    height: 630px;
+}
+
+.frames{
+    display: flex;
+    justify-content: center;
+    /* width: 1200px; */
+    /* position: absolute; */
+    top: 68px;
+    left: 0;
+}
+
+.squircle{
+    width: 11.25rem;
+    height: 11.25rem;
+    background-color: rgba(225, 225, 225, 0.3);
+    margin: 0 16px;
+    border-radius: 70px;
+    /* opacity: 0.3; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .squircle {
+        -webkit-backdrop-filter: blur(64px);
+        backdrop-filter: blur(64px);
+    }
+}
+
+.clip{
+    position: absolute;
+    border-radius: 70px;
+    overflow: hidden;
+    width: 11.25rem;
+    height: 11.25rem;
+}
+
+.headline{
+    font-family: "Circular Black";
+    color: white;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.cta{
+    text-align: center;
+    color: #fff;
+    font-family: "Circular Bold";
+    font-size: 28px;
+    font-weight: 400;
+    background-color: #4784F4;
+    padding: 20px 64px;
+    border-radius: 16px;
+    margin-top: 45px;
+    /* max-width: 250px; */
+}
+
+.footer-tag{
+    z-index: 1;
+    position: relative;
+    bottom: -240px;
+    right: 0;
+    transform: translate(125%, 50%);
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img{
+    width: 36px;
+    margin-right: 2px;
+}
+
+p{
+    font-family: "Circular Bold";
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 400;
+    opacity: 0.92;
+    letter-spacing: -1px;
+}
+
+.text-bg{
+    width: 100%;
+    height: 52px;
+    background-color: #121212;
+    position: absolute;
+    bottom: 0;
+}
+
+.text-bg p{
+   color: rgba(225, 225, 225, 0.5);
+   text-align: center;
+   font-size: 24px;
+   font-family: "Circular Bold";
+   margin-top: 11px;
+   font-weight: 400;
+}
